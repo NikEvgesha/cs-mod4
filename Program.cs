@@ -14,7 +14,7 @@ namespace cs_mod4
                 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Анкета №{0}", user_counter + 1);
+                Console.WriteLine("\nАнкета №{0}", user_counter + 1);
 
                 Console.Write("Введите имя пользователя: ");
                 User.Name = Console.ReadLine();
@@ -40,21 +40,20 @@ namespace cs_mod4
                     User.Favcolors[i] = Console.ReadLine();
                 }
 
-                Console.WriteLine("\n\n\n");
 
-                Console.WriteLine("Анкета {0}-го пользователя:\n\tИмя и фамилия: {1} {2}\n\tЛогин: {3} (длина логина = {4})\n\tВозраст: {5}\n\t", user_counter + 1, User.Surname, User.Name, User.Login, User.LogLength, User.Age);
+                Console.WriteLine("\nАнкета {0}-го пользователя:\n\tИмя и фамилия: {1} {2}\n\tЛогин: {3} (длина логина = {4})\n\tВозраст: {5}", user_counter + 1, User.Surname, User.Name, User.Login, User.LogLength, User.Age);
                
                 if (User.Pet)
                 {
-                    Console.WriteLine("У пользователя ЕСТЬ питомец.");
+                    Console.WriteLine("\tУ пользователя ЕСТЬ питомец.");
                 }
                 else
                 {
-                    Console.WriteLine("У пользователя НЕТ питомца :(");
+                    Console.WriteLine("\tУ пользователя НЕТ питомца :(");
                 }
 
 
-                Console.WriteLine("Любимые цвета: ");
+                Console.WriteLine("\tЛюбимые цвета: ");
                 foreach (var color in User.Favcolors)
                 {
                     switch (color)
@@ -62,32 +61,32 @@ namespace cs_mod4
                         case "red":
                             Console.BackgroundColor = ConsoleColor.Red;
                             Console.ForegroundColor = ConsoleColor.Black;
-                            Console.WriteLine("Красный");
+                            Console.WriteLine("\tКрасный");
                             break;
 
                         case "green":
                             Console.BackgroundColor = ConsoleColor.Green;
                             Console.ForegroundColor = ConsoleColor.Black;
-                            Console.WriteLine("Зеленый");
+                            Console.WriteLine("\tЗеленый");
                             break;
 
                         case "cyan":
                             Console.BackgroundColor = ConsoleColor.Cyan;
                             Console.ForegroundColor = ConsoleColor.Black;
-                            Console.WriteLine("Бирюзовый");
+                            Console.WriteLine("\tБирюзовый");
                             break;
 
                         case "yellow":
                             Console.BackgroundColor = ConsoleColor.Yellow;
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("желтый");
+                            Console.WriteLine("\tжелтый");
                             break;
 
 
                         default:
                             Console.BackgroundColor = ConsoleColor.Magenta;
                             Console.ForegroundColor = ConsoleColor.Black;
-                            Console.WriteLine("Я не знаю такого цвета! Но мой любимый цвет - пурпурный!");
+                            Console.WriteLine("\tЯ не знаю такого цвета! Но мой любимый цвет - пурпурный!");
                             break;
                     }
                 }
