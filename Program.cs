@@ -9,33 +9,31 @@ namespace cs_mod4
             Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы: ");
             var mycolor = Console.ReadLine();
 
-            if (mycolor == "red")
+           switch (mycolor)
             {
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.Black;
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("Your color is red!");
+                break;
 
-                Console.WriteLine("Your color is red!");
-            }
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("Your color is green!");
+                break;
 
-            else if (mycolor == "green")
-            {
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.WriteLine("Your color is green!");
-            }
+                case "cyan":
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("Your color is cyan!");
+                break;
 
-            else if (mycolor == "yellow")
-            {
-                Console.BackgroundColor = ConsoleColor.Yellow;
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.WriteLine("Your color is yellow!");
-            }
-
-            else
-            {
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.WriteLine("I don't know this color! My favourite color is cyan!");
+                default:
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("I don't know this color! My favourite color is yellow!");
+                break;
             }
         }
     }
